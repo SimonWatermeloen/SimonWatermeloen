@@ -51,6 +51,64 @@
             color: #fff;
         }
 
+        /* Add white space between sections */
+        .menu-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0; /* Adjust margin to create white space */
+        }
+
+        /* Style for the fruit images */
+        .fruit-image {
+            max-width: 50%;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mijn Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <div class="menu-section">
+                    <a href="https://simonwatermeloen.github.io/"><h2>Home</h2></a>
+                    <a href="https://simonwatermeloen.github.io/page2"><h2>Test Plaatje</h2></a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-section">
+                    <a href="https://simonwatermeloen.github.io/page3"><h2>Over Ons</h2></a>
+                    <a href="https://simonwatermeloen.github.io/page4"><h2>Contact</h2></a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Empty main content area -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Mijn Fruitwinkel</p>
+    </footer>
+</body>
+</html>
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff6600;
+            color: #fff;
+        }
+
         /* Add margin to headings */
         nav ul li h2 {
             margin-bottom: 10px;
