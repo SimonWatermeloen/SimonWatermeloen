@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Website</title> <!--De titel van mijn website-->
+    <title>Mijn Website</title> <!-- De titel van mijn website -->
     <style>
         body {
             background-color: #ffea70;
@@ -30,12 +30,25 @@
             list-style: none;
             padding: 0;
             text-align: center;
+            display: flex; /* Add flex display */
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 15px;
             font-size: 18px;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #ff6600; /* Button background color */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        nav ul li a:hover {
+            background-color: #ff9900; /* Button background color on hover */
         }
 
         main {
