@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tweede Pagina</title>
-  <style>
+    <title>Mijn Website</title> <!-- De titel van mijn website -->
+    <style>
         body {
-            background-color: #ffffcc;
-            color: #000;
-            font-family: Arial, sans-serif;
+            background-color: #ffea70;
+            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; 
+            min-height: 100vh;
         }
 
         header {
             text-align: center;
-            background-color: #333; 
-            color: #fff; 
-            padding: 10px 0; 
+            background-color: #ffa500;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 24px;
         }
 
         nav ul {
@@ -33,44 +34,100 @@
 
         nav ul li {
             display: inline;
-            margin: 0 10px;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #d6a406;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
 
         main {
             text-align: center;
             padding: 20px;
-            background-color: #fff; 
-            border-radius: 10px; 
+            background-color: #fff;
+            border-radius: 10px;
         }
 
         footer {
             text-align: center;
-            background-color: #333; 
+            background-color: #ffa500;
             color: #fff;
             padding: 10px 0;
+        }
+
+        /* Style for the fruit images */
+        .fruit-image {
+            max-width: 50%; /* Adjust the size of the images */
+            float: left; /* Float the images to the left side */
+            margin-right: 20px; /* Add some space between the images and the content */
+        }
+
+        /* Additional styling for the content */
+        .content {
+            text-align: left;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welkom op mijn Tweede Pagina</h1>
+        <h1>Mijn Website</h1>
+    </header>
     <nav>
         <ul>
             <li><a href="https://simonwatermeloen.github.io/">Home</a></li>
-            <li><a href="https://simonwatermeloen.github.io/page2">Tweede pagina</a></li>
-            <li><a href="https://simonwatermeloen.github.io/page3">Derde Pagina</a></li>
+            <li><a href="https://simonwatermeloen.github.io/page2">Test Plaatje</a></li>
+            <li><a href="https://simonwatermeloen.github.io/page3">Over Ons</a></li>
+            <li><a href="https://simonwatermeloen.github.io/page4">Contact</a></li>
         </ul>
     </nav>
-    </header>
     <main>
-        <section>
-            <h2>Banaan Afbeelding</h2>
-            <p>Hier is een afbeelding van een banaan:</p>
-<img src="banaan.jpg" width="200" height="150">
-        </section>
+        <div class="content">
+
+        </div>
+<section>
+    <h2>Kleurmodellen: RGB en CMYK</h2>
+    <p>
+        Het RGB-kleurmodel staat voor Rood, Groen en Blauw. Dit model wordt vaak gebruikt voor het weergeven van kleuren op beeldschermen. In dit model worden kleuren gecreëerd door verschillende hoeveelheden rood, groen en blauw met elkaar te mengen.
+        Elk pixel op een beeldscherm is samengesteld uit een combinatie van deze drie kleuren, met waarden die variëren van 0 tot 255 voor elk van de drie kleuren. Bijvoorbeeld, een pixel met RGB-waarden (255, 0, 0) geeft puur rood weer.
+    </p>
+
+    <p>
+        Het CMYK-kleurmodel staat voor Cyaan, Magenta, Geel en Zwart (Key). Dit model wordt voornamelijk gebruikt in drukwerk, zoals tijdschriften en posters. In het CMYK-model worden kleuren gecreëerd door de hoeveelheden cyaan, magenta, geel en zwart met elkaar te mengen. Het is een subtractief kleurmodel, wat betekent dat wanneer alle kleuren op maximaal staan, je zwart krijgt. Bij dit model worden percentages gebruikt om de hoeveelheid van elke kleur in een pixel aan te geven, bijvoorbeeld 30% cyaan, 20% magenta, 10% geel en 0% zwart.
+    </p>
+</section>
+
+<section>
+<div class="container">
+    <h2>Pixels en Resolutie</h2>
+    <p>
+        Een pixel (afgekort voor "picture element") is de kleinste eenheid van een digitale afbeelding of weergave. Het vertegenwoordigt een enkel punt in een raster, waarbij elke pixel een specifieke kleur heeft volgens het gekozen kleurmodel, zoals RGB of CMYK.
+    </p>
+
+    <p>
+        De resolutie van een afbeelding verwijst naar het aantal pixels dat in de breedte en hoogte van de afbeelding wordt weergegeven. Een hogere resolutie betekent meer pixels per inch (PPI) of dots per inch (DPI), wat resulteert in een scherpere en gedetailleerdere afbeelding. Resolutie is belangrijk bij zowel digitale beeldschermen als bij het drukken van afbeeldingen, omdat het de kwaliteit van de weergave beïnvloedt.
+    </p>
+</div>div class="container">
+</section>
+
     </main>
     <footer>
-        <p>Gemaakt door Simon Rodrigues Pereira, H4A</p>
+        <p>&copy; 2023 Mijn Website</p>
     </footer>
 </body>
 </html>
