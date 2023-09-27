@@ -3,98 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Fruitwinkel</title>
+    <title>Mijn Website</title> <!-- De titel van mijn website -->
     <style>
         body {
-            background-color: #f0f0f0;
+            background-color: #ffea70;
             color: #333;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         header {
-            background-color: #ff0000;
-            color: white;
-            padding: 20px 0;
             text-align: center;
-        }
-
-        nav {
-            background-color: #ff0000;
-            color: white;
+            background-color: #ffa500;
+            color: #fff;
             padding: 10px 0;
-            text-align: center;
+            font-size: 24px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 20px;
+            margin: 0 15px;
+            font-size: 18px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #d6a406;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
 
-        h1 {
-            font-size: 36px;
+        footer {
             text-align: center;
+            background-color: #ffa500;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        /* Style for the fruit images */
+        .fruit-image {
+            max-width: 50%; /* Adjust the size of the images */
+            float: left; /* Float the images to the left side */
+            margin-right: 20px; /* Add some space between the images and the content */
+        }
+
+        /* Additional styling for the content */
+        .content {
+            text-align: left;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
             color: #333;
         }
 
         p {
             font-size: 18px;
-            text-align: center;
             color: #666;
-        }
-
-        .fruit-image {
-            max-width: 100%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        footer {
-            background-color: #ff0000;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mijn Fruitwinkel</h1>
+        <h1>Mijn Website</h1>
     </header>
     <nav>
         <ul>
             <li><a href="https://simonwatermeloen.github.io/">Home</a></li>
-            <li><a href="https://simonwatermeloen.github.io/page2">Producten</a></li>
+            <li><a href="https://simonwatermeloen.github.io/page2">Test Plaatje</a></li>
             <li><a href="https://simonwatermeloen.github.io/page3">Over Ons</a></li>
             <li><a href="https://simonwatermeloen.github.io/page4">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <img src="Watermeloen.jpg" alt="Watermelon" class="fruit-image">
-        <section>
-            <h2>Verse en Sappige Vruchten!</h2>
-            <p>Ontdek onze selectie van de beste vruchten van het seizoen.</p>
-        </section>
-        <img src="Banaan.jpg" alt="Banana" class="fruit-image">
-        <!-- Rest of your content -->
-    </div>
+    <main>
+        <div class="content">
+
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2023 Mijn Fruitwinkel</p>
+        <p>&copy; 2023 Mijn Website</p>
     </footer>
 </body>
 </html>
