@@ -1,7 +1,7 @@
 body {
-    background-color: #ffea70;
+    background-color: #ffea70; <!-- Kleur van achtergrond -->
     color: #333;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;  <!-- Lettertype -->
     margin: 0;
     padding: 0;
     display: flex;
@@ -47,7 +47,7 @@ main {
 }
 
 .fruit-image {
-    max-width: 50%;
+    max-width: 50%; 
     float: left;
     margin-right: 20px;
 }
@@ -58,18 +58,18 @@ main {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 28px; <!-- Hoe groot h2 moet worden, en welke kleur -->
     color: #333;
 }
 
 p {
-    font-size: 18px;
+    font-size: 18px; <!-- hoe groot P moet worden, en welke kleur -->
     color: #666;
 }
 
 footer {
     text-align: center;
-    background-color: #ffa500;
+    background-color: #ffa500; <!-- Lettertype van footer, kleur en plaats -->
     color: #fff;
     padding: 10px 0;
 }
