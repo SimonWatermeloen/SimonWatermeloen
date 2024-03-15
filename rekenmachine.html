@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <html>
+<head>
+  <h1> Rekenmachine </h1>
+</head>
+<body>
+  <script>
+    var nummer1;
+    var nummer2;
+    var nummer3;
+    var teken;
 
+    window.alert("nummer 1");
+    nummer1 = Number(window.prompt('Enter a value for nummer1'));
+
+    // vraag nummer 1, basaal dus geen uitleg
+    window.alert("nummer2");
+    nummer2 = Number(window.prompt('Enter a value for nummer2'));
+
+    // vraag nummer 2
+    window.alert("*, /, +,-");
+    teken = window.prompt('Enter a value for teken');
+
+    // vraag het teken aan
+    var totaal;
+
+    totaal = 0;
+    var doorgaan;
+
+    doorgaan = true;
+    while (doorgaan) {
+        if (teken == "+") {
+
+            // als de gebruiken + heeft ingevuld, doe nummer1 + nummer 2
+            totaal = nummer1 + nummer2 + totaal;
+            window.alert("nog een getal test");
+            nummer3 = Number(window.prompt('Enter a value for nummer3'));
+            totaal = nummer1 + nummer2 + totaal;
+        } else {
+            if (teken == "-") {
+
+                // als de gebruiken - heeft ingevuld, doe nummer1 - nummer 2
+                totaal = nummer1 - nummer2;
+            } else {
+                if (teken == "*") {
+
+                    // als de gebruiken * heeft ingevuld, doe nummer1 * nummer 2
+                    totaal = nummer1 * nummer2;
+                } else {
+                    if (teken == "/") {
+
+                        // als de gebruiken / heeft ingevuld, doe nummer1 / nummer 2
+                        totaal = (double) nummer1 / nummer2;
+                    } else {
+                        window.alert("error reload the program");
+
+                        // Als de gebruiken geen van alle heeft getypt, een breakpoint en error
+                    }
+                }
+            }
+        }
+        window.alert("U totaal is " + totaal);
+        // Name = window.prompt('Enter a value for Name');
+    }
+    window.alert("U totaal is " + totaal);
+    window.alert("rekenmachine uit");
+
+
+  </script>
+</body>
+  </html>
