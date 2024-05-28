@@ -49,3 +49,19 @@
     </form>
 </body>
 </html>
+
+>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $ingevuldWachtwoord = $_POST["wachtwoord"];
+            $correctWachtwoord = "123123"; // Het juiste wachtwoord
+
+            if ($ingevuldWachtwoord == $correctWachtwoord) {
+                // Doorverwijzen naar een andere pagina
+                header("Location: https://docs.google.com/presentation/d/143IkU6NxboScHj8DytNxa_A40B0kvOn_jofyOnUREAM/edit#slide=id.p");
+                exit;
+            } else {
+                echo "<p style='color: red;'>Fout wachtwoord, probeer iets anders!</p>";
+            }
+        }
+    ?>
