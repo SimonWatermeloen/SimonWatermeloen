@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beveiligde Pagina</title>
+    <style>
+        body {
+            background-image: url('kluis.webp');
+            background-size: cover;
+        }
+        .search-bar {
+            margin: 100px auto;
+            width: 300px;
+        }
+        .search-bar input {
+            width: 200px;
+            padding: 10px;
+        }
+        .search-bar button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <input type="password" id="password" placeholder="Voer wachtwoord in">
+        <button onclick="checkPassword()">Verzenden</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === 'gelukt') {
+                window.location.href = 'https://www.youtube.com';
+            } else {
+                alert('Verkeerd wachtwoord, probeer het opnieuw.');
+            }
+        }
+    </script>
+</body>
+</html>
