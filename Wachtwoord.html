@@ -1,5 +1,40 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#pwd {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#message {
+  color: red;
+  margin-top: 10px;
+}
+</style>
+</head>
 <body>
 
 <h2>Wachtwoord invoeren</h2>
@@ -14,8 +49,8 @@
 <script>
 function checkPassword() {
   var pwd = document.getElementById("pwd").value;
-  if(pwd == "123123") {
-    window.location.href = "https://classroom.google.com/c/NjE4NTI3MzcyMDc5";
+  if(pwd == "jouwwachtwoord") {
+    window.location.href = "https://www.youtube.com";
   } else {
     document.getElementById("message").innerHTML = "Het wachtwoord was fout. Probeer het opnieuw.";
   }
