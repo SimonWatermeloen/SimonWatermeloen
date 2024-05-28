@@ -1,67 +1,26 @@
 <!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wachtwoordcontrole</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-        }
-        form {
-            max-width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+<html>
 <body>
-    <form action="check_wachtwoord.php" method="post">
-        <label for="wachtwoord">Voer het wachtwoord in:</label>
-        <input type="password" id="wachtwoord" name="wachtwoord">
-        <input type="submit" value="Verzenden">
-    </form>
+
+<h2>Wachtwoord invoeren</h2>
+
+<p>Voer het wachtwoord in en klik op Verzenden:</p>
+
+<input type="password" id="pwd">
+<button onclick="checkPassword()">Verzenden</button>
+
+<p id="message"></p>
+
+<script>
+function checkPassword() {
+  var pwd = document.getElementById("pwd").value;
+  if(pwd == "123123") {
+    window.location.href = "https://classroom.google.com/c/NjE4NTI3MzcyMDc5";
+  } else {
+    document.getElementById("message").innerHTML = "Het wachtwoord was fout. Probeer het opnieuw.";
+  }
+}
+</script>
+
 </body>
 </html>
-
->
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $ingevuldWachtwoord = $_POST["wachtwoord"];
-            $correctWachtwoord = "123123"; // Het juiste wachtwoord
-
-            if ($ingevuldWachtwoord == $correctWachtwoord) {
-                // Doorverwijzen naar een andere pagina
-                header("Location: https://docs.google.com/presentation/d/143IkU6NxboScHj8DytNxa_A40B0kvOn_jofyOnUREAM/edit#slide=id.p");
-                exit;
-            } else {
-                echo "<p style='color: red;'>Fout wachtwoord, probeer iets anders!</p>";
-            }
-        }
-    ?>
