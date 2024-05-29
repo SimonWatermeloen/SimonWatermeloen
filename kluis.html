@@ -23,6 +23,9 @@
             border: none;
             flex: 1 0 30%; /* Groeit en krimpt om ruimte te vullen, basisbreedte van 30% */
         }
+        .code-lock .reset {
+            background-color: red; /* Rode achtergrond voor de reset-knop */
+        }
     </style>
 </head>
 <body>
@@ -39,6 +42,7 @@
             <button onclick="enterNumber(8)">8</button>
             <button onclick="enterNumber(9)">9</button>
             <button onclick="enterNumber(0)">0</button>
+            <button class="reset" onclick="resetCode()">Reset</button> <!-- Reset-knop -->
         </div>
     </div>
 
@@ -55,10 +59,14 @@
                     window.location.href = 'https://www.youtube.com';
                 } else {
                     alert('Verkeerde code, probeer het opnieuw.');
-                    enteredCode = '';
-                    document.getElementById('code').innerText = '';
+                    resetCode();
                 }
             }
+        }
+
+        function resetCode() { /* Functie om de code te resetten */
+            enteredCode = '';
+            document.getElementById('code').innerText = '';
         }
     </script>
 </body>
