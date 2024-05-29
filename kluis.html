@@ -7,18 +7,14 @@
             background-image: url('Kluis.jpg');
             background-size: cover;
         }
-        .search-bar {
-            position: absolute; /* Hiermee kunt u de exacte positie van het element bepalen */
-            top: 50px; /* Afstand vanaf de bovenkant van de pagina */
-            left: 50px; /* Afstand vanaf de linkerkant van de pagina */
-            width: 300px;
+        .code-lock {
+            position: absolute;
+            top: 50px;
+            left: 50px;
         }
-        .search-bar input {
-            width: 200px;
+        .code-lock button {
             padding: 10px;
-        }
-        .search-bar button {
-            padding: 10px;
+            margin: 5px;
             background-color: green;
             color: white;
             border: none;
@@ -26,18 +22,38 @@
     </style>
 </head>
 <body>
-    <div class="search-bar">
-        <input type="password" id="password" placeholder="Voer wachtwoord in">
-        <button onclick="checkPassword()">Verzenden</button>
+    <div class="code-lock">
+        <p id="code"></p>
+        <div id="buttons">
+            <button onclick="enterNumber(1)">1</button>
+            <button onclick="enterNumber(2)">2</button>
+            <button onclick="enterNumber(3)">3</button>
+            <button onclick="enterNumber(4)">4</button>
+            <button onclick="enterNumber(5)">5</button>
+            <button onclick="enterNumber(6)">6</button>
+            <button onclick="enterNumber(7)">7</button>
+            <button onclick="enterNumber(8)">8</button>
+            <button onclick="enterNumber(9)">9</button>
+            <button onclick="enterNumber(0)">0</button>
+        </div>
     </div>
 
     <script>
-        function checkPassword() {
-            var password = document.getElementById('password').value;
-            if (password === 'gelukt') {
-                window.location.href = 'https://www.youtube.com';
-            } else {
-                alert('Verkeerd wachtwoord, probeer het opnieuw.');
+        var enteredCode = '';
+        var correctCode = '1234';
+
+        function enterNumber(number) {
+            enteredCode += number;
+            document.getElementById('code').innerText = enteredCode;
+
+            if (enteredCode.length === 4) {
+                if (enteredCode === correctCode) {
+                    window.location.href = 'https://www.youtube.com';
+                } else {
+                    alert('Verkeerde code, probeer het opnieuw.');
+                    enteredCode = '';
+                    document.getElementById('code').innerText = '';
+                }
             }
         }
     </script>
