@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#pwd {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#message {
+  color: red;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Oma haar wachtwoord  </h2>
+
+<p>Voer het wachtwoord in en klik op Verzenden:  </p>
+
+<input type="password" id="pwd">
+<button onclick="checkPassword()">Verzenden</button>
+
+<p id="message"></p>
+
+<script>
+function checkPassword() {
+  var pwd = document.getElementById("pwd").value;
+  if(pwd == "123123") {
+    window.location.href = "https://docs.google.com/presentation/d/1nJq-GHFZTcyibxCQ7Cr8SvUoUPuVfIBHagd0NEJE1g4/edit?usp=sharing";
+  } else {
+    document.getElementById("message").innerHTML = "Het wachtwoord was fout. Probeer het opnieuw.";
+  }
+}
+</script>
+
+</body>
+</html>
 
