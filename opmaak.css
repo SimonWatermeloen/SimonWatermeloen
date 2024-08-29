@@ -1,7 +1,7 @@
 body {
-    background-color: #ffea70; <!-- Kleur van achtergrond -->
+    background-color: #ffea70; /* Kleur van achtergrond */
     color: #333;
-    font-family: 'Arial', sans-serif;  <!-- Lettertype -->
+    font-family: 'Arial', sans-serif;  /* Lettertype */
     margin: 0;
     padding: 0;
     display: flex;
@@ -26,7 +26,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
+    position: relative;
     margin: 0 15px;
     font-size: 18px;
 }
@@ -37,6 +38,25 @@ nav ul li a {
     background-color: #d6a406;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d6a406;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 0;
 }
 
 main {
@@ -58,18 +78,18 @@ main {
 }
 
 h2 {
-    font-size: 28px; <!-- Hoe groot h2 moet worden, en welke kleur -->
+    font-size: 28px; /* Hoe groot h2 moet worden, en welke kleur */
     color: #333;
 }
 
 p {
-    font-size: 18px; <!-- hoe groot P moet worden, en welke kleur -->
+    font-size: 18px; /* hoe groot P moet worden, en welke kleur */
     color: #666;
 }
 
 footer {
     text-align: center;
-    background-color: #ffa500; <!-- Lettertype van footer, kleur en plaats -->
+    background-color: #ffa500; /* Lettertype van footer, kleur en plaats */
     color: #fff;
     padding: 10px 0;
 }
