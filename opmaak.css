@@ -48,6 +48,7 @@ nav ul li ul {
     background-color: #d6a406;
     padding: 0;
     list-style: none;
+    z-index: 1000; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
 }
 
 nav ul li:hover ul {
