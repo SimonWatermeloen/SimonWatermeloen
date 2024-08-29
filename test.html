@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Website</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mijn Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://simonwatermeloen.github.io/">Home</a></li>
+            <li>
+                <a href="#">Meer</a>
+                <ul>
+                    <li><a href="https://simonwatermeloen.github.io/KleurmodelEnPixels">Kleurmodel en Pixels</a></li>
+                    <li><a href="https://simonwatermeloen.github.io/computer">Werking van een Computer</a></li>
+                    <li><a href="https://simonwatermeloen.github.io/binair">Binair Stelsel</a></li>
+                    <li><a href="https://simonwatermeloen.github.io/Compressie">Compressie technieken</a></li>
+                    <li><a href="https://simonwatermeloen.github.io/rekenmachine">Rekenmachine</a></li>
+                    <li><a href="https://simonwatermeloen.github.io/binary">Binary Search</a></li>
+                    <li><a href="https://simonwatermeloen.github.io/bubblesort">Bubble Soort</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
