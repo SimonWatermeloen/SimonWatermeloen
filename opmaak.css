@@ -48,7 +48,7 @@ nav ul li ul {
     background-color: #d6a406;
     padding: 0;
     list-style: none;
-    z-index: 1000; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
+    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
 }
 
 nav ul li:hover ul {
@@ -65,6 +65,14 @@ nav ul li ul li ul li{
     display: block;
     margin: 35px;
         color: #ffb700;
+        display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d6a406;
+    padding: 0;
+    list-style: none;
+    y-index:1000 ; 
 
 main {
     text-align: center;
