@@ -1,110 +1,112 @@
-body {
-    background-color: #ffea70; /* Kleur van achtergrond */
-    color: #333;
-    font-family: 'Arial', sans-serif;  /* Lettertype */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+ body {
+            background-color: #ffea70; /* Kleur van achtergrond */
+            color: #333;
+            font-family: 'Arial', sans-serif;  /* Lettertype */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-header {
-    text-align: center;
-    background-color: #ffa500;
-    color: #fff;
-    padding: 10px 0;
-    font-size: 24px;
-}
+        header {
+            text-align: center;
+            background-color: #ffa500;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 24px;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
 
-nav ul li {
-    display: inline-block;
-    position: relative;
-    margin: 0 15px;
-    font-size: 18px;
-}
+        nav ul li {
+            display: inline-block;
+            position: relative;
+            margin: 0 15px;
+            font-size: 18px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #d6a406;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #d6a406;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
 
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #d6a406;
-    padding: 0;
-    list-style: none;
-    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
-}
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #d6a406;
+            padding: 0;
+            list-style: none;
+            z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
+        }
 
-nav ul li:hover ul {
-    display: block;
-}
+        nav ul li:hover ul {
+            display: block;
+        }
 
-nav ul li ul li {
-    display: block;
-    margin: 40px;
-    
-}
+        nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
 
-nav ul li ul li ul li{
-    display: block;
-    margin: 35px;
-        color: #ffb700;
-        display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #d6a406;
-    padding: 0;
-    list-style: none;
-    y-index:1000 ; 
+        /* Tweede dropdownmenu dat naar rechts gaat */
+        nav ul li ul li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #d6a406;
+            padding: 0;
+            list-style: none;
+            z-index: 1200;
+        }
 
-main {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-}
+        nav ul li ul li:hover ul {
+            display: block;
+        }
 
-.fruit-image {
-    max-width: 50%; 
-    float: left;
-    margin-right: 20px;
-}
+        main {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
 
-.content {
-    text-align: left;
-    padding: 20px;
-}
+        .fruit-image {
+            max-width: 50%; 
+            float: left;
+            margin-right: 20px;
+        }
 
-h2 {
-    font-size: 28px; /* Hoe groot h2 moet worden, en welke kleur */
-    color: #333;
-}
+        .content {
+            text-align: left;
+            padding: 20px;
+        }
 
-p {
-    font-size: 18px; /* hoe groot P moet worden, en welke kleur */
-    color: #666;
-}
+        h2 {
+            font-size: 28px; /* Hoe groot h2 moet worden, en welke kleur */
+            color: #333;
+        }
 
-footer {
-    text-align: center;
-    background-color: #ffa500; /* Lettertype van footer, kleur en plaats */
-    color: #fff;
-    padding: 10px 0;
-}
+        p {
+            font-size: 18px; /* hoe groot P moet worden, en welke kleur */
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #ffa500; /* Lettertype van footer, kleur en plaats */
+            color: #fff;
+            padding: 10px 0;
+        }
