@@ -47,7 +47,7 @@
             top: 100%;
             left: 0;
             background-color: #d6a406;
-            padding: 20px 0; /* Extra ruimte binnen de dropdown */
+            padding: 25px 0; /* Extra ruimte binnen de dropdown */
             list-style: none;
             z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
         }
@@ -58,7 +58,7 @@
 
         nav ul li ul li {
             display: block;
-            margin: 15px 0; /* Extra ruimte tussen de submenu-items */
+            margin: 20px 0; /* Extra ruimte tussen de submenu-items */
         }
 
         /* Tweede dropdownmenu dat naar rechts gaat */
@@ -68,7 +68,7 @@
             top: 0;
             left: 100%;
             background-color: #d6a406;
-            padding: 15px 0; /* Extra ruimte binnen de tweede dropdown */
+            padding: 20px 0; /* Extra ruimte binnen de tweede dropdown */
             list-style: none;
             z-index: 1200;
         }
