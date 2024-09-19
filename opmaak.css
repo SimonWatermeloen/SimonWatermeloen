@@ -49,21 +49,22 @@ nav ul li a:hover {
 nav ul li ul {
     display: none;
     position: absolute;
-    top: 0;
-    left: 100%;
+    top: 100%;
+    left: 0;
     background-color: #d6a406;
-    padding: 25px 0; /* Extra ruimte binnen de dropdown */
+    padding: 10px 0; /* Extra ruimte binnen de dropdown */
     list-style: none;
     z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
+    white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
 }
 
 nav ul li:hover ul {
-    display: block;
+    display: flex;
 }
 
 nav ul li ul li {
-    display: block;
-    margin: 20px 0; /* Extra ruimte tussen de submenu-items */
+    display: inline-block;
+    margin: 0 10px; /* Extra ruimte tussen de submenu-items */
 }
 
 nav ul li ul li a:hover {
