@@ -1,5 +1,5 @@
 body {
-    background-color: #ffea70; /* Kleur van achtergrond */
+    background-color: #f4f4f9; /* Neutrale achtergrondkleur */
     color: #333;
     font-family: 'Arial', sans-serif;  /* Lettertype */
     margin: 0;
@@ -13,16 +13,18 @@ body {
 
 header {
     text-align: center;
-    background-color: #ffa500;
+    background-color: #0073e6; /* Professionele blauwe kleur */
     color: #fff;
-    padding: 10px 0;
-    font-size: 24px;
+    padding: 20px 0;
+    font-size: 32px; /* Grotere header tekst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 20px 0; /* Ruimte boven en onder de navigatie */
 }
 
 nav ul li {
@@ -34,16 +36,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    background-color: #d6a406;
+    color: #0073e6;
+    background-color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     margin: 10px 0; /* Extra ruimte tussen de menu-items */
-    transition: background-color 0.3s; /* Voor een vloeiende overgang bij hover */
+    transition: background-color 0.3s, color 0.3s; /* Vloeiende overgang bij hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
 nav ul li a:hover {
-    background-color: #b58900; /* Donkerdere kleur bij hover */
+    background-color: #0073e6; /* Blauwe kleur bij hover */
+    color: #fff; /* Witte tekst bij hover */
 }
 
 nav ul li ul {
@@ -51,37 +55,46 @@ nav ul li ul {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #d6a406;
+    background-color: #fff;
     padding: 10px 0; /* Extra ruimte binnen de dropdown */
     list-style: none;
     z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
     white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
 nav ul li:hover ul {
-    display: flex;
+    display: block;
 }
 
 nav ul li ul li {
-    display: inline-block;
-    margin: 0 10px; /* Extra ruimte tussen de submenu-items */
+    display: block;
+    margin: 0; /* Geen extra ruimte tussen de submenu-items */
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    color: #0073e6;
 }
 
 nav ul li ul li a:hover {
-    background-color: #b58900; /* Donkerdere kleur bij hover voor submenu-items */
+    background-color: #0073e6; /* Blauwe kleur bij hover voor submenu-items */
+    color: #fff; /* Witte tekst bij hover voor submenu-items */
 }
 
 main {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    max-width: 800px; /* Maximale breedte voor betere leesbaarheid */
+    margin: 20px;
 }
 
 .fruit-image {
-    max-width: 50%; 
-    float: left;
-    margin-right: 20px;
+    max-width: 100%; 
+    margin-bottom: 20px; /* Ruimte onder de afbeelding */
 }
 
 .content {
@@ -90,18 +103,22 @@ main {
 }
 
 h2 {
-    font-size: 28px; /* Hoe groot h2 moet worden, en welke kleur */
-    color: #333;
+    font-size: 32px; /* Grotere h2 */
+    color: #0073e6; /* Blauwe kleur voor h2 */
 }
 
 p {
     font-size: 18px; /* hoe groot P moet worden, en welke kleur */
     color: #666;
+    line-height: 1.6; /* Betere leesbaarheid */
 }
 
 footer {
     text-align: center;
-    background-color: #ffa500; /* Lettertype van footer, kleur en plaats */
+    background-color: #0073e6; /* Blauwe kleur voor footer */
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-top: auto; /* Zorgt ervoor dat de footer altijd onderaan staat */
+    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
