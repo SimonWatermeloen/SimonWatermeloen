@@ -40,8 +40,8 @@ nav ul li a {
     color: #0073e6;
     background-color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px 0; /* Extra ruimte tussen de menu-items */
+    border-radius: 10px;
+    margin: 15px 0; /* Extra ruimte tussen de menu-items */
     transition: background-color 0.3s, color 0.3s; /* Vloeiende overgang bij hover */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
@@ -71,7 +71,7 @@ nav ul li:hover ul {
 
 nav ul li ul li {
     display: block;
-    margin: 0; /* Geen extra ruimte tussen de submenu-items */
+    margin: 20px; /* Geen extra ruimte tussen de submenu-items */
 }
 
 nav ul li ul li a {
