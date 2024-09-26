@@ -15,6 +15,7 @@ header {
     text-align: center;
     background-color: #0073e6; /* Professionele blauwe kleur */
     color: #fff;
+    font-family: Georgia, serif;
     padding: 20px 0;
     font-size: 32px; /* Grotere header tekst */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
