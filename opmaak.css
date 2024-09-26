@@ -15,7 +15,6 @@ header {
     text-align: center;
     background-color: #0073e6; /* Professionele blauwe kleur */
     color: #fff;
-    font-family: Georgia, serif;
     padding: 20px 0;
     font-size: 32px; /* Grotere header tekst */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
@@ -66,6 +65,7 @@ nav ul li ul {
 
 nav ul li:hover ul {
     display: block;
+    animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
 }
 
 nav ul li ul li {
@@ -76,11 +76,24 @@ nav ul li ul li {
 nav ul li ul li a {
     padding: 10px 20px;
     color: #0073e6;
+    border-bottom: 1px solid #555; /* Ruimte tussen de submenu-items */
 }
 
 nav ul li ul li a:hover {
     background-color: #0073e6; /* Blauwe kleur bij hover voor submenu-items */
     color: #fff; /* Witte tekst bij hover voor submenu-items */
+}
+
+/* Animatie keyframes */
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 main {
