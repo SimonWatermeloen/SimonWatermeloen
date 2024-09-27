@@ -57,7 +57,7 @@ nav ul li ul {
     top: 100%; /* Boven het hoofdmenu */
     left: 0;
     background-color: #fff;
-    padding: 5px 0; /* Verminderde ruimte boven en onder de dropdown */
+    padding: 1px 0; /* Verminderde ruimte boven en onder de dropdown */
     list-style: none;
     z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
     white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
@@ -71,13 +71,13 @@ nav ul li:hover ul {
 
 nav ul li ul li {
     display: block;
-    margin: 10px 0; /* Ruimte tussen de submenu-items */
+    margin: 15px 0; /* Ruimte tussen de submenu-items */
 }
 
 nav ul li ul li a {
     padding: 10px 20px;
     color: #0073e6;
-    border-bottom: 1px solid #ddd; /* Lichtere scheiding tussen submenu-items */
+    border-bottom: 2px solid #ddd; /* Lichtere scheiding tussen submenu-items */
 }
 
 nav ul li ul li:last-child a {
