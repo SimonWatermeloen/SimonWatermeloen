@@ -1,72 +1,146 @@
-/* Basisstijl voor het menu */
-ul {
-    list-style-type: none;
-    padding: 0;
+body {
+    background-color: #f4f4f9; /* Neutrale achtergrondkleur */
+    color: #333;
+    font-family: 'Arial', sans-serif;  /* Lettertype */
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-li {
-    position: relative;
+header {
+    text-align: center;
+    background-color: #0073e6; /* Professionele blauwe kleur */
+    color: #fff;
+    font-family: Georgia, serif;
+    padding: 20px 0;
+    font-size: 32px; /* Grotere header tekst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0; /* Ruimte boven en onder de navigatie */
+}
+
+nav ul li {
     display: inline-block;
+    position: relative;
+    margin: 0 15px;
+    font-size: 18px;
 }
 
-li a {
-    display: block;
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
+nav ul li a {
     text-decoration: none;
+    color: #0073e6;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 15px 0; /* Extra ruimte tussen de menu-items */
+    transition: background-color 0.3s, color 0.3s; /* Vloeiende overgang bij hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-li a:hover {
-    background-color: #2980b9;
+nav ul li a:hover {
+    background-color: #0073e6; /* Blauwe kleur bij hover */
+    color: #fff; /* Witte tekst bij hover */
 }
 
-/* Stijl voor het dropdown menu */
-ul.dropdown {
+nav ul li ul {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 100%; /* Boven het hoofdmenu */
     left: 0;
-    animation: dropdown 0.3s ease-in-out forwards;
+    background-color: #fff;
+    padding: 1px 0; /* Verminderde ruimte boven en onder de dropdown  1 oktober*/
+    list-style: none;
+    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
+    white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-li:hover > ul.dropdown {
+nav ul li:hover ul {
     display: block;
+    animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
 }
 
-/* Stijl voor het submenu */
-ul.submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    animation: submenu 0.3s ease-in-out forwards;
-}
-
-li:hover > ul.submenu {
+nav ul li ul li {
     display: block;
+    margin: 10px 0; /* Ruimte tussen de submenu-items */
 }
 
-/* Animaties */
+nav ul li ul li a {
+    padding: 10px 20px;
+    color: #0073e6;
+    border-bottom: 1px solid #ddd; /* Lichtere scheiding tussen submenu-items */
+}
+
+nav ul li ul li:last-child a {
+    border-bottom: none; /* Laatste item zonder onderlijn */
+}
+
+nav ul li ul li a:hover {
+    background-color: #0073e6; /* Blauwe kleur bij hover voor submenu-items */
+    color: #fff; /* Witte tekst bij hover voor submenu-items */
+}
+
+/* Animatie keyframes */
 @keyframes dropdown {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes submenu {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+main {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    max-width: 800px; /* Maximale breedte voor betere leesbaarheid */
+    margin: 20px;
 }
+
+.fruit-image {
+    max-width: 100%; 
+    margin-bottom: 20px; /* Ruimte onder de afbeelding */
+}
+
+.content {
+    text-align: left;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 32px; /* Grotere h2 */
+    color: #0073e6; /* Blauwe kleur voor h2 */
+}
+
+p {
+    font-size: 18px; /* hoe groot P moet worden, en welke kleur */
+    color: #666;
+    line-height: 1.6; /* Betere leesbaarheid */
+}
+
+footer {
+    text-align: center;
+    background-color: #0073e6; /* Blauwe kleur voor footer */
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto; /* Zorgt ervoor dat de footer altijd onderaan staat */
+    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+}
+
+
+Maak mijn CSS bestand beter
