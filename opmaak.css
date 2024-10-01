@@ -83,10 +83,23 @@ nav ul li ul li a {
 nav ul li ul li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
+nav ul li ul li{
+    display: none;
+    position: static;
+    top: 100%; /* Boven het hoofdmenu */
+    right:30px;
+    background-color: #fff;
+    padding: 3px 0; /* Verminderde ruimte boven en onder de dropdown  1 oktober*/
+    list-style: none;
+    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
+    white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+}
 
-nav ul li ul li a:hover {
-    background-color: #0073e6; /* Blauwe kleur bij hover voor submenu-items */
-    color: #fff; /* Witte tekst bij hover voor submenu-items */
+nav ul li:hover ul {
+    display: block;
+    animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
+
 }
 
 /* Animatie keyframes */
