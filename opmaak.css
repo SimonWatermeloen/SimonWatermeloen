@@ -83,23 +83,23 @@ nav ul li ul li a {
 nav ul li ul li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
-nav ul li ul li{
+
+nav ul li ul li ul {
     display: none;
-    position: static;
-    top: 100%; /* Boven het hoofdmenu */
-    right:30px;
+    position: absolute;
+    top: 0; /* Align with the top of the first submenu */
+    left: -100%; /* Position to the left of the first submenu */
     background-color: #fff;
-    padding: 3px 0; /* Verminderde ruimte boven en onder de dropdown  1 oktober*/
+    padding: 1px 0;
     list-style: none;
-    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
-    white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    z-index: 1200;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li:hover ul {
+nav ul li ul li:hover ul {
     display: block;
-    animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
-
+    animation: dropdown 0.3s ease-in-out;
 }
 
 /* Animatie keyframes */
@@ -147,12 +147,9 @@ p {
 
 footer {
     text-align: center;
-    background-color: #0073e6; /* Blauwe kleur voor footer */
+    background-color: #0073e6; /* Blauwe kleur voor de footer */
     color: #fff;
     padding: 20px 0;
-    margin-top: auto; /* Zorgt ervoor dat de footer altijd onderaan staat */
-    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
+    font-size: 16px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
-
-
