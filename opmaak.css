@@ -1,7 +1,16 @@
+:root {
+    --primary-color: #0073e6;
+    --secondary-color: #f4f4f9;
+    --text-color: #333;
+    --header-font: 'Georgia', serif;
+    --body-font: 'Arial', sans-serif;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 body {
-    background-color: #f4f4f9; /* Neutrale achtergrondkleur */
-    color: #333;
-    font-family: 'Arial', sans-serif;  /* Lettertype */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,19 +22,19 @@ body {
 
 header {
     text-align: center;
-    background-color: #0073e6; /* Professionele blauwe kleur */
+    background-color: var(--primary-color);
     color: #fff;
-    font-family: Georgia, serif;
+    font-family: var(--header-font);
     padding: 20px 0;
-    font-size: 32px; /* Grotere header tekst */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    font-size: 32px;
+    box-shadow: var(--box-shadow);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    margin: 20px 0; /* Ruimte boven en onder de navigatie */
+    margin: 20px 0;
 }
 
 nav ul li {
@@ -37,59 +46,59 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #0073e6;
+    color: var(--primary-color);
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
-    margin: 15px 0; /* Extra ruimte tussen de menu-items */
-    transition: background-color 0.3s, color 0.3s; /* Vloeiende overgang bij hover */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    margin: 15px 0;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li a:hover {
-    background-color: #0073e6; /* Blauwe kleur bij hover */
-    color: #fff; /* Witte tekst bij hover */
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 nav ul li ul {
     display: none;
     position: absolute;
-    top: 100%; /* Boven het hoofdmenu */
+    top: 100%;
     left: 0;
     background-color: #fff;
-    padding: 1px 0; /* Verminderde ruimte boven en onder de dropdown  1 oktober*/
+    padding: 1px 0;
     list-style: none;
-    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
-    white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    z-index: 1200;
+    white-space: nowrap;
+    box-shadow: var(--box-shadow);
 }
 
 nav ul li:hover ul {
     display: block;
-    animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
+    animation: dropdown 0.3s ease-in-out;
+    will-change: opacity, transform;
 }
 
 nav ul li ul li {
     display: block;
-    margin: 10px 0; /* Ruimte tussen de submenu-items */
+    margin: 10px 0;
 }
 
 nav ul li ul li a {
     padding: 10px 20px;
-    color: #0073e6;
-    border-bottom: 1px solid #ddd; /* Lichtere scheiding tussen submenu-items */
+    color: var(--primary-color);
+    border-bottom: 1px solid #ddd;
 }
 
 nav ul li ul li:last-child a {
-    border-bottom: none; /* Laatste item zonder onderlijn */
+    border-bottom: none;
 }
 
 nav ul li ul li a:hover {
-    background-color: #0073e6; /* Blauwe kleur bij hover voor submenu-items */
-    color: #fff; /* Witte tekst bij hover voor submenu-items */
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
-/* Animatie keyframes */
 @keyframes dropdown {
     0% {
         opacity: 0;
@@ -106,14 +115,14 @@ main {
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
-    max-width: 800px; /* Maximale breedte voor betere leesbaarheid */
+    box-shadow: var(--box-shadow);
+    max-width: 800px;
     margin: 20px;
 }
 
 .fruit-image {
-    max-width: 100%; 
-    margin-bottom: 20px; /* Ruimte onder de afbeelding */
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .content {
@@ -122,22 +131,22 @@ main {
 }
 
 h2 {
-    font-size: 32px; /* Grotere h2 */
-    color: #0073e6; /* Blauwe kleur voor h2 */
+    font-size: 32px;
+    color: var(--primary-color);
 }
 
 p {
-    font-size: 18px; /* hoe groot P moet worden, en welke kleur */
+    font-size: 18px;
     color: #666;
-    line-height: 1.6; /* Betere leesbaarheid */
+    line-height: 1.6;
 }
 
 footer {
     text-align: center;
-    background-color: #0073e6; /* Blauwe kleur voor footer */
+    background-color: var(--primary-color);
     color: #fff;
     padding: 20px 0;
-    margin-top: auto; /* Zorgt ervoor dat de footer altijd onderaan staat */
-    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    margin-top: auto;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
