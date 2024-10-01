@@ -1,136 +1,72 @@
-:root {
-    --primary-color: #0073e6;
-    --secondary-color: #f4f4f9;
-    --text-color: #333;
-    --header-font: 'Georgia', serif;
-    --body-font: 'Arial', sans-serif;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-body {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    margin: 0;
+/* Basisstijl voor het menu */
+ul {
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    margin: 0;
 }
 
-header {
-    text-align: center;
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    li {
-        position: relative;
-        display: inline-block;
-    }
-
-    li a {
-        display: block;
-        padding: 10px;
-        background-color: #3498db;
-        color: white;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: #2980b9;
-    }
-
-    /* Stijl voor het dropdown menu */
-    ul.dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        animation: dropdown 0.3s ease-in-out forwards;
-    }
-
-    li:hover > ul.dropdown {
-        display: block;
-    }
-
-    /* Stijl voor het submenu */
-    ul.submenu {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        animation: submenu 0.3s ease-in-out forwards;
-    }
-
-    li:hover > ul.submenu {
-        display: block;
-    }
-
-    /* Animaties */
-    @keyframes dropdown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes submenu {
-        from {
-            opacity: 0;
-            transform: translateX(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-main {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    max-width: 800px;
-    margin: 20px;
+li {
+    position: relative;
+    display: inline-block;
 }
 
-.fruit-image {
-    max-width: 100%;
-    margin-bottom: 20px;
+li a {
+    display: block;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
 }
 
-.content {
-    text-align: left;
-    padding: 20px;
+li a:hover {
+    background-color: #2980b9;
 }
 
-h2 {
-    font-size: 32px;
-    color: var(--primary-color);
+/* Stijl voor het dropdown menu */
+ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    animation: dropdown 0.3s ease-in-out forwards;
 }
 
-p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
+li:hover > ul.dropdown {
+    display: block;
 }
 
-footer {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 20px 0;
-    margin-top: auto;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}}
+/* Stijl voor het submenu */
+ul.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    animation: submenu 0.3s ease-in-out forwards;
+}
+
+li:hover > ul.submenu {
+    display: block;
+}
+
+/* Animaties */
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes submenu {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
