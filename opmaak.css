@@ -22,93 +22,77 @@ body {
 
 header {
     text-align: center;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-family: var(--header-font);
-    padding: 20px 0;
-    font-size: 32px;
-    box-shadow: var(--box-shadow);
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 20px 0;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--primary-color);
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: 15px 0;
-    transition: background-color 0.3s, color 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul li a:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    padding: 1px 0;
-    list-style: none;
-    z-index: 1200;
-    white-space: nowrap;
-    box-shadow: var(--box-shadow);
-}
-
-nav ul li:hover ul {
-    display: block;
-    animation: dropdown 0.3s ease-in-out;
-    will-change: opacity, transform;
-}
-
-nav ul li ul li {
-    display: block;
-    margin: 10px 0;
-}
-
-nav ul li ul li a {
-    padding: 10px 20px;
-    color: var(--primary-color);
-    border-bottom: 1px solid #ddd;
-}
-
-nav ul li ul li:last-child a {
-    border-bottom: none;
-}
-
-nav ul li ul li a:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-@keyframes dropdown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    li {
+        position: relative;
+        display: inline-block;
     }
-}
+
+    li a {
+        display: block;
+        padding: 10px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #2980b9;
+    }
+
+    /* Stijl voor het dropdown menu */
+    ul.dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        animation: dropdown 0.3s ease-in-out forwards;
+    }
+
+    li:hover > ul.dropdown {
+        display: block;
+    }
+
+    /* Stijl voor het submenu */
+    ul.submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        animation: submenu 0.3s ease-in-out forwards;
+    }
+
+    li:hover > ul.submenu {
+        display: block;
+    }
+
+    /* Animaties */
+    @keyframes dropdown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes submenu {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 
 main {
     text-align: center;
@@ -149,4 +133,4 @@ footer {
     margin-top: auto;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
+}}
