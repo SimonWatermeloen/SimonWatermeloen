@@ -57,7 +57,7 @@ nav ul li ul {
     top: 100%; /* Boven het hoofdmenu */
     left: 0;
     background-color: #fff;
-    padding: 5px 0; /* Verminderde ruimte boven en onder de dropdown */
+    padding: 1px 0; /* Verminderde ruimte boven en onder de dropdown  1 oktober*/
     list-style: none;
     z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
     white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
