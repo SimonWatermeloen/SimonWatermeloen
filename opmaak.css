@@ -98,10 +98,8 @@ nav ul li ul li ul {
 }
 
 nav ul li ul li:hover ul {
-    display: block;
-    animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
-}
-
+    display: block; /* Shows the second submenu on hover */
+    animation: dropdown 0.3s ease-in-out;
 /* Animatie keyframes */
 @keyframes dropdown {
     0% {
