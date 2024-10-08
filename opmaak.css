@@ -84,28 +84,25 @@ nav ul li ul li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
 
-nav ul li ul {
+nav ul li ul li ul {
     display: none;
     position: absolute;
-    top: 100%; /* Aligns the submenu below the parent item */
-    left: 0;
+    top: 0; /* Align with the top of the first submenu */
+    left: 100%; /* Position to the right of the first submenu */
     background-color: #fff;
     padding: 1px 0;
     list-style: none;
-    z-index: 1200; 
+    z-index: 1200;
     white-space: nowrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li:hover > ul {
-    display: block; /* Shows the first submenu on hover */
-    animation: dropdown 0.3s ease-in-out;
+nav ul li ul li:hover ul {
+    display: block;
+    animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
 }
 
-nav ul li ul li:hover > ul {
-    display: block; /* Shows the second submenu on hover */
-    animation: dropdown 0.3s ease-in-out;
-}
+/* Animatie keyframes */
 @keyframes dropdown {
     0% {
         opacity: 0;
