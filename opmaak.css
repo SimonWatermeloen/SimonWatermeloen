@@ -88,7 +88,7 @@ nav ul li ul li ul {
     display: none;
     position: absolute;
     top: 0; /* Align with the top of the first submenu */
-    left: -100%; /* Position to the left of the first submenu */
+    right: -150%; /* Position to the left of the first submenu */
     background-color: #fff;
     padding: 1px 0;
     list-style: none;
