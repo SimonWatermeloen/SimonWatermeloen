@@ -88,7 +88,7 @@ nav ul li ul li ul {
     display: none;
     position: absolute;
     top: 0; /* Align with the top of the first submenu */
-    right: -150%; /* Position to the left of the first submenu */
+    left: 100%; /* Position to the right of the first submenu */
     background-color: #fff;
     padding: 1px 0;
     list-style: none;
@@ -99,7 +99,7 @@ nav ul li ul li ul {
 
 nav ul li ul li:hover ul {
     display: block;
-    animation: dropdown 0.3s ease-in-out;
+    animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
 }
 
 /* Animatie keyframes */
