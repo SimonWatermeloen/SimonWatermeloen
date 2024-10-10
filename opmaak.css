@@ -28,14 +28,14 @@ nav ul {
     margin: 20px 0; /* Ruimte boven en onder de navigatie */
 }
 
-nav ul li {
+nav ul > li {
     display: inline-block;
     position: relative;
     margin: 0 15px;
     font-size: 18px;
 }
 
-nav ul li a {
+nav ul > li a {
     text-decoration: none;
     color: #0073e6;
     background-color: #fff;
@@ -46,12 +46,12 @@ nav ul li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-nav ul li a:hover {
+nav ul > li a:hover {
     background-color: #0073e6; /* Blauwe kleur bij hover */
     color: #fff; /* Witte tekst bij hover */
 }
 
-nav ul li ul {
+nav ul li > ul {
     display: none;
     position: absolute;
     top: 100%; /* Boven het hoofdmenu */
@@ -64,27 +64,27 @@ nav ul li ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-nav ul li:hover ul {
+nav ul > li:hover ul {
     display: block;
     animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
 }
 
-nav ul li ul li {
+nav ul li ul > li {
     display: block;
     margin: 10px 0; /* Ruimte tussen de submenu-items */
 }
 
-nav ul li ul li a {
+nav ul li ul > li a {
     padding: 10px 20px;
     color: #0073e6;
     border-bottom: 1px solid #ddd; /* Lichtere scheiding tussen submenu-items */
 }
 
-nav ul li ul li:last-child a {
+nav ul li ul > li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
 
-nav ul li ul li ul {
+nav ul li ul li > ul {
     display: none;
     position: absolute;
     top: 0; /* Align with the top of the first submenu */
@@ -97,7 +97,7 @@ nav ul li ul li ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li ul li:hover ul {
+nav ul li ul > li:hover ul {
     display: block;
     animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
 }
