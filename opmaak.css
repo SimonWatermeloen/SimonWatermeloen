@@ -74,17 +74,17 @@ nav ul li ul > li {
     margin: 10px 0; /* Ruimte tussen de submenu-items */
 }
 
-nav ul li ul > li a {
+nav ul li ul li a {
     padding: 10px 20px;
     color: #0073e6;
     border-bottom: 1px solid #ddd; /* Lichtere scheiding tussen submenu-items */
 }
 
-nav ul li ul > li:last-child a {
+nav ul li ul li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
 
-nav ul li ul li > ul {
+nav ul li ul > li ul {
     display: none;
     position: absolute;
     top: 0; /* Align with the top of the first submenu */
