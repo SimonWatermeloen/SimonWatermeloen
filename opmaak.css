@@ -51,7 +51,7 @@ nav ul li a:hover {
     color: #fff; /* Witte tekst bij hover */
 }
 
-nav ul li > ul {
+nav ul li ul {
     display: none;
     position: absolute;
     top: 100%; /* Boven het hoofdmenu */
@@ -64,7 +64,7 @@ nav ul li > ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-nav ul li:hover  ul {
+nav ul li:hover ul {
     display: block;
     animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
 }
@@ -84,7 +84,7 @@ nav ul li ul li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
 
-nav ul li ul li > ul {
+nav ul li ul li ul {
     display: none;
     position: absolute;
     top: 0; /* Align with the top of the first submenu */
@@ -97,7 +97,7 @@ nav ul li ul li > ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li ul li:hover > ul {
+nav ul li ul li:hover ul {
     display: block;
     animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
 }
