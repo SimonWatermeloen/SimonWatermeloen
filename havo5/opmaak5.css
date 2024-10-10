@@ -1,25 +1,25 @@
 body {
-    background-color: #f4f4f9; /* Neutrale achtergrondkleur */
-    color: #333;
-    font-family: 'Arial', sans-serif;  /* Lettertype */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-header {
-    text-align: center;
-    background-color: #0073e6; /* Professionele blauwe kleur */
-    color: #fff;
-    font-family: Georgia, serif;
-    padding: 20px 0;
-    font-size: 32px; /* Grotere header tekst */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
-}
+    body {
+        background-color: #f4f4f9; /* Neutrale achtergrondkleur */
+        color: #333;
+        font-family: 'Arial', sans-serif;  /* Lettertype */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    header {
+        text-align: center;
+        background-color: #0073e6; /* Professionele blauwe kleur */
+        color: #fff;
+        font-family: Georgia, serif;
+        padding: 20px 0;
+        font-size: 32px; /* Grotere header tekst */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */    
 
 nav ul {
     list-style: none;
