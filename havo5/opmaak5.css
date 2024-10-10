@@ -115,7 +115,9 @@ nav ul li ul li:hover ul {
 }
 
 main {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
@@ -125,13 +127,14 @@ main {
 }
 
 .fruit-image {
-    max-width: 100%; 
-    margin-bottom: 20px; /* Ruimte onder de afbeelding */
+    max-width: 40%; 
+    margin-left: 20px; /* Ruimte rechts van de tekst */
 }
 
 .content {
     text-align: left;
     padding: 20px;
+    max-width: 55%; /* Beperkt de breedte van de tekst */
 }
 
 h2 {
@@ -142,7 +145,8 @@ h2 {
 p {
     font-size: 18px; /* hoe groot P moet worden, en welke kleur */
     color: #666;
-    line-height: 1.6; /* Betere leesbaarheid */
+    line-height: 1.8; /* Betere leesbaarheid */
+    margin-bottom: 20px; /* Ruimte tussen paragrafen */
 }
 
 footer {
