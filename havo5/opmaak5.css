@@ -1,25 +1,25 @@
 body {
-    body {
-        background-color: #f4f4f9; /* Neutrale achtergrondkleur */
-        color: #333;
-        font-family: 'Arial', sans-serif;  /* Lettertype */
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-    
-    header {
-        text-align: center;
-        background-color: #0073e6; /* Professionele blauwe kleur */
-        color: #fff;
-        font-family: Georgia, serif;
-        padding: 20px 0;
-        font-size: 32px; /* Grotere header tekst */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */    
+    background-color: #f4f4f9; /* Neutrale achtergrondkleur */
+    color: #333;
+    font-family: 'Arial', sans-serif;  /* Lettertype */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: #0073e6; /* Professionele blauwe kleur */
+    color: #fff;
+    font-family: Georgia, serif;
+    padding: 20px 0;
+    font-size: 32px; /* Grotere header tekst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+}
 
 nav ul {
     list-style: none;
@@ -28,14 +28,14 @@ nav ul {
     margin: 20px 0; /* Ruimte boven en onder de navigatie */
 }
 
-nav ul li {
+nav ul > li {
     display: inline-block;
     position: relative;
     margin: 0 15px;
     font-size: 18px;
 }
 
-nav ul li a {
+nav ul > li a {
     text-decoration: none;
     color: #0073e6;
     background-color: #fff;
@@ -46,12 +46,12 @@ nav ul li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-nav ul li a:hover {
+nav ul > li a:hover {
     background-color: #0073e6; /* Blauwe kleur bij hover */
     color: #fff; /* Witte tekst bij hover */
 }
 
-nav ul li ul {
+nav ul li > ul {
     display: none;
     position: absolute;
     top: 100%; /* Boven het hoofdmenu */
@@ -64,12 +64,12 @@ nav ul li ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
-nav ul li:hover ul {
+nav ul > li:hover ul {
     display: block;
     animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
 }
 
-nav ul li ul li {
+nav ul li ul > li {
     display: block;
     margin: 10px 0; /* Ruimte tussen de submenu-items */
 }
@@ -84,7 +84,7 @@ nav ul li ul li:last-child a {
     border-bottom: none; /* Laatste item zonder onderlijn */
 }
 
-nav ul li ul li ul {
+nav ul li ul > li ul {
     display: none;
     position: absolute;
     top: 0; /* Align with the top of the first submenu */
@@ -97,7 +97,7 @@ nav ul li ul li ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li ul li:hover ul {
+nav ul li ul > li:hover ul {
     display: block;
     animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
 }
@@ -115,9 +115,7 @@ nav ul li ul li:hover ul {
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    text-align: center;
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
@@ -127,14 +125,13 @@ main {
 }
 
 .fruit-image {
-    max-width: 40%; 
-    margin-left: 20px; /* Ruimte rechts van de tekst */
+    max-width: 100%; 
+    margin-bottom: 20px; /* Ruimte onder de afbeelding */
 }
 
 .content {
     text-align: left;
     padding: 20px;
-    max-width: 55%; /* Beperkt de breedte van de tekst */
 }
 
 h2 {
@@ -145,8 +142,7 @@ h2 {
 p {
     font-size: 18px; /* hoe groot P moet worden, en welke kleur */
     color: #666;
-    line-height: 1.8; /* Betere leesbaarheid */
-    margin-bottom: 20px; /* Ruimte tussen paragrafen */
+    line-height: 1.6; /* Betere leesbaarheid */
 }
 
 footer {
