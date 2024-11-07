@@ -77,12 +77,13 @@ ul.menu > li > a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000; /* Verhoog z-index om het menu voor andere inhoud te plaatsen */
     opacity: 0;
-    transition: opacity 0.2s ease;
+    visibility: hidden; /* Verberg het submenu door visibility */
+    transition: opacity 0.2s ease, visibility 0.2s ease; /* Visibiliteit aanpassen in plaats van display */
 }
 
 .dropdown:hover .submenu {
-    display: block;
     opacity: 1;
+    visibility: visible; /* Maak het submenu zichtbaar bij hover */
 }
 
 .submenu li {
@@ -118,6 +119,7 @@ ul.menu > li > a:hover {
 
 .dropdown:hover .submenu li:hover .submenu-right {
     display: block;
+    visibility: visible; /* Zorg dat het rechter submenu zichtbaar is */
 }
 
 /* Inhoud stijlen */
