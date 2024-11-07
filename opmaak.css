@@ -2,23 +2,23 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Speels lettertype */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* lettertype */
     background-color: #f0f8ff; /* Lichtblauwe achtergrond */
-    color: #333333; /* Donkergrijze tekst */
+    color: #333333; /* tekst */
 }
 
 /* Menu-container en menu stijlen */
 .menu-container {
-    background-color: #3c2a91; /* Midnight Purple */
+    background-color: #3c2a91; /* Paarse achtergrond */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px 0;
     text-align: center;
-    border-bottom: 5px solid #ff7f00; /* Helder oranje onderlijn */
+    border-bottom: 5px solid #ff7f00; /* Oranje onderlijn */
 }
 
 ul.menu {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; 
+    padding: 0; /* geen ruimte bij het menu*/
     margin: 0;
     display: inline-flex;
     align-items: center;
