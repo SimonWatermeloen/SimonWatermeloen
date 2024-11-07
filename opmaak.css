@@ -1,155 +1,177 @@
+/* Algemene stijlen */
 body {
-    background-color: #f4f4f9; /* Neutrale achtergrondkleur */
-    color: #333;
-    font-family: 'Arial', sans-serif;  /* Lettertype */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Speels lettertype */
+    background-color: #f0f8ff; /* Lichtblauwe achtergrond */
+    color: #333333; /* Donkergrijze tekst */
 }
 
-header {
+/* Menu-container en menu stijlen */
+.menu-container {
+    background-color: #3c2a91; /* Midnight Purple */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
     text-align: center;
-    background-color: #0073e6; /* Professionele blauwe kleur */
-    color: #fff;
-    font-family: Georgia, serif;
-    padding: 20px 0;
-    font-size: 32px; /* Grotere header tekst */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    border-bottom: 5px solid #ff7f00; /* Helder oranje onderlijn */
 }
 
-nav ul {
-    list-style: none;
+ul.menu {
+    list-style-type: none;
     padding: 0;
-    text-align: center;
-    margin: 20px 0; /* Ruimte boven en onder de navigatie */
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul > li {
-    display: inline-block;
+ul.menu > li {
     position: relative;
-    margin: 0 15px;
-    font-size: 18px;
+    margin: 0 20px;
 }
 
-nav ul > li a {
+ul.menu > li > a {
+    color: #ffffff; /* Witte tekst */
     text-decoration: none;
-    color: #0073e6;
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: 15px 0; /* Extra ruimte tussen de menu-items */
-    transition: background-color 0.3s, color 0.3s; /* Vloeiende overgang bij hover */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    padding: 12px 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 10px; /* Meer afgeronde hoeken */
 }
 
-nav ul > li a:hover {
-    background-color: #0073e6; /* Blauwe kleur bij hover */
-    color: #fff; /* Witte tekst bij hover */
+ul.menu > li > a:hover {
+    background-color: #ff7f00; /* Helder oranje bij hover */
+    transform: scale(1.1); /* Grotere schaal bij hover */
 }
 
-nav ul li > ul {
+/* Dropdown menu */
+.dropdown .submenu {
     display: none;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
     position: absolute;
-    top: 100%; /* Boven het hoofdmenu */
-    left: 0;
-    background-color: #fff;
-    padding: 1px 0; /* Verminderde ruimte boven en onder de dropdown  1 oktober*/
-    list-style: none;
-    z-index: 1200; /* Zorgt ervoor dat het dropdown menu boven andere elementen verschijnt */
-    white-space: nowrap; /* Zorgt ervoor dat de items niet op een nieuwe regel worden geplaatst */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
-}
-
-nav ul > li:hover ul {
-    display: block;
-    animation: dropdown 0.3s ease-in-out; /* Animatie voor het dropdown menu */
-}
-
-nav ul li ul > li {
-    display: block;
-    margin: 10px 0; /* Ruimte tussen de submenu-items */
-}
-
-nav ul li ul li a {
-    padding: 10px 20px;
-    color: #0073e6;
-    border-bottom: 1px solid #ddd; /* Lichtere scheiding tussen submenu-items */
-}
-
-nav ul li ul li:last-child a {
-    border-bottom: none; /* Laatste item zonder onderlijn */
-}
-
-nav ul li ul > li ul {
-    display: none;
-    position: absolute;
-    top: 0; /* Align with the top of the first submenu */
-    left: 100%; /* Position to the right of the first submenu */
-    background-color: #fff;
-    padding: 1px 0;
-    list-style: none;
-    z-index: 1200;
-    white-space: nowrap;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-nav ul li ul > li:hover ul {
-    display: block;
-    animation: dropdown 0.3s ease-in-out; /* Animatie voor het tweede niveau dropdown menu */
-}
-
-/* Animatie keyframes */
-@keyframes dropdown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-main {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
-    max-width: 800px; /* Maximale breedte voor betere leesbaarheid */
-    margin: 20px;
-}
-
-.fruit-image {
-    max-width: 100%; 
-    margin-bottom: 20px; /* Ruimte onder de afbeelding */
-}
-
-.content {
+    top: 100%; /* Plaats submenu onder de hoofdlink */
+    background-color: #4b2c91; /* Donkerder paars */
+    padding: 10px;
+    border-radius: 10px; /* Afronde hoeken */
+    min-width: 160px; /* Iets bredere submenu */
+    z-index: 1;
     text-align: left;
-    padding: 20px;
+    animation: fadeIn 0.5s; /* Fade-in animatie */
 }
 
-h2 {
-    font-size: 32px; /* Grotere h2 */
-    color: #0073e6; /* Blauwe kleur voor h2 */
+.submenu li {
+    list-style: none;
 }
 
-p {
-    font-size: 18px; /* hoe groot P moet worden, en welke kleur */
-    color: #666;
-    line-height: 1.6; /* Betere leesbaarheid */
-}
-
-footer {
-    text-align: center;
-    background-color: #0073e6; /* Blauwe kleur voor de footer */
-    color: #fff;
-    padding: 20px 0;
+.submenu a {
+    color: #ffffff; /* Witte tekst */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
     font-size: 16px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    border-radius: 5px; /* Afronde hoeken */
+}
+
+.submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparant wit bij hover */
+}
+
+/* Submenu binnen de submenu */
+.submenu-right {
+    display: none;
+    position: absolute;
+    left: 160px; /* Plaats submenu rechts van het hoofdsubmenu */
+    top: 0;
+    background-color: #4b2c91;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeIn 0.5s; /* Fade-in animatie */
+}
+
+.dropdown:hover .submenu li:hover .submenu-right {
+    display: block;
+}
+
+/* Inhoud stijlen */
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff8dc; /* Crème achtergrond */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #333333; /* Donkergrijze tekstkleur */
+    text-align: left;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column; /* Gebruik kolomrichting voor de inhoud */
+    gap: 25px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animatie voor fade-in effect */
+}
+
+.content h1, .content h2, .content h3 {
+    color: #3c2a91; /* Midnight Purple voor kopjes */
+    margin-top: 0;  /* Geen marge aan de bovenkant van de kopjes */
+    margin-bottom: 5px; /* Zeer kleine marge aan de onderkant van de kopjes */
+    padding: 0; /* Verwijder eventuele padding van kopjes */
+}
+
+.content p {
+    margin-top: 0; /* Geen ruimte boven alinea's */
+    margin-bottom: 15px; /* Kleinere ruimte onder de alinea */
+    font-size: 17px; /* Aangepaste lettergrootte voor alinea's */
+    padding: 0; /* Verwijder padding van alinea's */
+}
+
+.content .media {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.content img, .content video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraal uitlijnen van afbeeldingen */
+    border-radius: 10px; /* Afronde hoeken voor media */
+}
+
+/* Footer stijlen */
+.footer {
+    background-color: #3c2a91; /* Midnight Purple */
+    color: #ffffff; /* Witte tekst */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    border-top: 5px solid #ff7f00; /* Helder oranje bovenlijn */
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+/* Animaties */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
