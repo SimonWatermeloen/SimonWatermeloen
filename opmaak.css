@@ -17,6 +17,8 @@ body {
     text-align: center;
     border-radius: 10px; 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative; /* Zorg dat menu boven de inhoud staat */
+    z-index: 1000; /* Hoog genoeg om boven de inhoud te komen */
 }
 
 .menu-container:hover {
@@ -63,6 +65,7 @@ ul.menu > li > a:hover {
 /* Dropdown menu */
 .dropdown {
     position: relative; /* Zorg ervoor dat de submenu's goed gepositioneerd zijn */
+    z-index: 1001; /* Zorg dat het menu altijd boven andere inhoud komt */
 }
 
 .dropdown .submenu {
@@ -75,7 +78,7 @@ ul.menu > li > a:hover {
     border-radius: 10px;
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 1000; /* Verhoog z-index om het menu voor andere inhoud te plaatsen */
+    z-index: 1000; /* Zorg dat het submenu boven andere inhoud komt */
 }
 
 /* Toon submenu bij hover op de parent */
@@ -112,7 +115,7 @@ ul.menu > li > a:hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1001; /* Verhoog z-index om het submenu voor andere elementen te plaatsen */
+    z-index: 1002; /* Zorg ervoor dat submenu binnen submenu boven alles ligt */
 }
 
 /* Toon rechter submenu bij hover op een submenu-item */
@@ -136,44 +139,7 @@ ul.menu > li > a:hover {
     gap: 25px;
     opacity: 0;
     animation: fadeIn 1s forwards;
-}
-
-.content h1, .content h2, .content h3 {
-    color: #5a7f5c; /* Zachte groene tint voor koppen */
-    font-family: 'Poppins', sans-serif;
-    margin-top: 0;
-    margin-bottom: 8px;
-    padding: 0;
-    transition: color 0.3s ease;
-}
-
-.content h1:hover, .content h2:hover, .content h3:hover {
-    color: #3b7f45; /* Donkerder groen bij hover */
-}
-
-.content p {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 16px;
-    padding: 0;
-}
-
-.content .media {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.content img, .content video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.content img:hover, .content video:hover {
-    transform: scale(1.06); /* Vergroot afbeelding/video bij hover */
+    z-index: 1; /* Zorg ervoor dat de inhoud onder het menu komt */
 }
 
 /* Animatie voor fade-in effect bij de inhoud */
