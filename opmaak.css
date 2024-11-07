@@ -40,7 +40,7 @@ ul.menu > li {
 }
 
 ul.menu > li:hover {
-    transform: translateY(-5px); /* beweging bij hover */
+    transform: translateY(-5px); /* Beweging bij hover */
 }
 
 ul.menu > li > a {
@@ -67,8 +67,8 @@ ul.menu > li > a:hover {
 
 .dropdown .submenu {
     display: none;
-    position: relative; /*deze is veranderd, (als fout) */
-    top: 100%;
+    position: absolute; /* Correcte positionering van het submenu */
+    top: 100%; /* Zorg ervoor dat het submenu direct onder de hoofdoptie komt */
     left: 0;
     background-color: #6ba45f; /* Groen voor het submenu */
     padding: 10px;
@@ -76,16 +76,14 @@ ul.menu > li > a:hover {
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000; /* Verhoog z-index om het menu voor andere inhoud te plaatsen */
-    opacity: 0;
-    visibility: hidden; /* Verberg het submenu door visibility */
-    transition: opacity 0.2s ease, visibility 0.2s ease; /* Visibiliteit aanpassen in plaats van display */
 }
 
+/* Toon submenu bij hover op de parent */
 .dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible; /* Maak het submenu zichtbaar bij hover */
+    display: block; /* Toon het submenu bij hover */
 }
 
+/* Dropdown submenu-item */
 .submenu li {
     list-style: none;
 }
@@ -117,9 +115,9 @@ ul.menu > li > a:hover {
     z-index: 1001; /* Verhoog z-index om het submenu voor andere elementen te plaatsen */
 }
 
-.dropdown:hover .submenu li:hover .submenu-right {
-    display: block;
-    visibility: visible; /* Zorg dat het rechter submenu zichtbaar is */
+/* Toon rechter submenu bij hover op een submenu-item */
+.submenu li:hover .submenu-right {
+    display: block; /* Toon het rechter submenu bij hover op een submenu-item */
 }
 
 /* Inhoud stijlen */
@@ -177,7 +175,6 @@ ul.menu > li > a:hover {
 .content img:hover, .content video:hover {
     transform: scale(1.06); /* Vergroot afbeelding/video bij hover */
 }
-
 
 /* Animatie voor fade-in effect bij de inhoud */
 @keyframes fadeIn {
