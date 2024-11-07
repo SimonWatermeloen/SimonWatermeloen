@@ -2,28 +2,28 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /*lettertype*/
     background-color: #d4f7e3; /* Lichte groene achtergrondkleur */
     color: #2f4f2f; /* Donker groene tekst */
     line-height: 1.6;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Een transitie als de website wordt opgestart (voor de sier) */
 }
 
 /* Menu-container en menu stijlen */
 .menu-container {
-    background-color: #61b15f; /* Groen met een frisse uitstraling */
+    background-color: #61b15f; /* Groen voor de menu container */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 15px 0;
     text-align: center;
     border-radius: 10px; 
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /*Een transitie als de website wordt opgestart (voor de sier) */
     position: relative; /* Zorg dat menu boven de inhoud staat */
-    z-index: 1000; /* Hoog genoeg om boven de inhoud te komen */
+    z-index: 1000; /* de z-index  */
 }
 
-.menu-container:hover {
+.menu-container:hover { 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    transform: scale(1.02);
+    transform: scale(1.02); /* de menu container (bovenaan) wordt groter als je eroverheengaat (voor de sier) */
 }
 
 ul.menu {
@@ -32,13 +32,13 @@ ul.menu {
     margin: 0;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* eigenschappen voor het ul.menu */
 }
 
 ul.menu > li {
     position: relative;
     margin: 0 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* transitie als je over het menu hovert */
 }
 
 ul.menu > li:hover {
@@ -46,15 +46,15 @@ ul.menu > li:hover {
 }
 
 ul.menu > li > a {
-    color: #ffffff; /* Witte tekst */
+    color: #ffffff; /* Witte tekst (goede leesbaarheid) */
     text-decoration: none;
     padding: 12px 20px;
     font-weight: bold;
     font-size: 16px;
     border-radius: 25px; 
-    background-color: #3b7f45; /* Donkerder groen voor de knoppen */
+    background-color: #3b7f45; /* kleur groen voor de knoppen */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 ul.menu > li > a:hover {
@@ -65,25 +65,24 @@ ul.menu > li > a:hover {
 /* Dropdown menu */
 .dropdown {
     position: relative; /* Zorg ervoor dat de submenu's goed gepositioneerd zijn */
-    z-index: 1001; /* Zorg dat het menu altijd boven andere inhoud komt */
+    z-index: 1001; /* Zorg dat het menu altijd boven andere dingen komt */
 }
 
 .dropdown .submenu {
     display: none;
-    position: absolute; /* Correcte positionering van het submenu */
+    position: absolute; /* goede plek van het submenu */
     top: 100%; /* Zorg ervoor dat het submenu direct onder de hoofdoptie komt */
     left: 0;
-    background-color: #6ba45f; /* Groen voor het submenu */
+    background-color: #6ba45f; /* Kleur voor het submenu */
     padding: 10px;
     border-radius: 10px;
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 1000; /* Zorg dat het submenu boven andere inhoud komt */
+    z-index: 1000; /* Zorg dat het submenu boven andere dingen komt */
 }
 
-/* Toon submenu bij hover op de parent */
 .dropdown:hover .submenu {
-    display: block; /* Toon het submenu bij hover */
+    display: block; /* Toon het submenu als je eroverheen hovert */
 }
 
 /* Dropdown submenu-item */
@@ -92,13 +91,13 @@ ul.menu > li > a:hover {
 }
 
 .submenu a {
-    color: #ffffff; 
+    color: #ffffff; /*wit voor leesbaarheid */
     text-decoration: none;
     padding: 8px 15px;
     display: block;
     font-size: 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /*transitie voor de sier*/
 }
 
 .submenu a:hover {
@@ -128,10 +127,10 @@ ul.menu > li > a:hover {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* kleur van achtergrond */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* lichte schaduw */ 
     border-radius: 15px;
-    color: #2f4f2f; /* Donker groene tekst */
+    color: #2f4f2f; /* Kleur van de tekst */
     text-align: left;
     line-height: 1.8;
     display: flex;
@@ -139,7 +138,7 @@ ul.menu > li > a:hover {
     gap: 25px;
     opacity: 0;
     animation: fadeIn 1s forwards;
-    z-index: 1; /* Zorg ervoor dat de inhoud onder het menu komt */
+    z-index: 1; /* Zorg ervoor dat dit stukje inhoud onder het (dropdown) menu komt */
 }
 
 /* Animatie voor fade-in effect bij de inhoud */
