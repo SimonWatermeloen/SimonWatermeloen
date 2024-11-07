@@ -61,6 +61,10 @@ ul.menu > li > a:hover {
 }
 
 /* Dropdown menu */
+.dropdown {
+    position: relative; /* Zorg ervoor dat de submenu's goed gepositioneerd zijn */
+}
+
 .dropdown .submenu {
     display: none;
     position: absolute;
@@ -71,7 +75,7 @@ ul.menu > li > a:hover {
     border-radius: 10px;
     min-width: 160px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    z-index: 1000; /* Verhoog z-index om het menu voor andere inhoud te plaatsen */
     opacity: 0;
     transition: opacity 0.2s ease;
 }
@@ -109,6 +113,7 @@ ul.menu > li > a:hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Verhoog z-index om het submenu voor andere elementen te plaatsen */
 }
 
 .dropdown:hover .submenu li:hover .submenu-right {
