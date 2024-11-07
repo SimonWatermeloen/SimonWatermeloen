@@ -66,7 +66,7 @@ ul.menu > li > a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #5b3ca3; /* verander */
+    background-color: #c76f12; /* verander */
     padding: 10px;
     border-radius: 10px;
     min-width: 160px;
@@ -105,7 +105,7 @@ ul.menu > li > a:hover {
     position: absolute;
     left: 160px; /* Plaats submenu rechts van het hoofdsubmenu */
     top: 0;
-    background-color: #5b3ca3;
+    background-color: #a85e0f;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -134,7 +134,7 @@ ul.menu > li > a:hover {
 }
 
 .content h1, .content h2, .content h3 {
-    color: #3c2a91;
+    color: #c1d9e3;
     font-family: 'Poppins', sans-serif;
     margin-top: 0;
     margin-bottom: 8px;
@@ -143,7 +143,7 @@ ul.menu > li > a:hover {
 }
 
 .content h1:hover, .content h2:hover, .content h3:hover {
-    color: #ff7f00; /* Kleurverandering bij hover */
+    color: #945010; /* Kleurverandering bij hover */
 }
 
 .content p {
@@ -168,38 +168,9 @@ ul.menu > li > a:hover {
 }
 
 .content img:hover, .content video:hover {
-    transform: scale(1.05); /* Vergroot afbeelding/video bij hover */
+    transform: scale(1.06); /* Vergroot afbeelding/video bij hover */
 }
 
-/* Footer stijlen */
-.footer {
-    background-color: #3c2a91;
-    color: #ffffff;
-    padding: 20px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 10px;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #ff7f00; /* Hover-effect voor links */
-}
-
-.footer img {
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
-}
 
 /* Animatie voor fade-in effect bij de inhoud */
 @keyframes fadeIn {
