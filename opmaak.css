@@ -2,23 +2,31 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* lettertype */
-    background-color: #f0f8ff; /* Lichtblauwe achtergrond */
-    color: #333333; /* tekst */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5; /* Lichtere achtergrondkleur */
+    color: #333333; /* Donkergrijze tekst */
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
 }
 
 /* Menu-container en menu stijlen */
 .menu-container {
-    background-color: #3c2a91; /* Paarse achtergrond */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #3c2a91; /* Midnight Purple */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 15px 0;
     text-align: center;
-    border-bottom: 5px solid #ff7f00; /* Oranje onderlijn */
+    border-radius: 10px; /* Rondere hoeken voor het menu */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.menu-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
 }
 
 ul.menu {
-    list-style-type: none; 
-    padding: 0; /* geen ruimte bij het menu*/
+    list-style-type: none;
+    padding: 0;
     margin: 0;
     display: inline-flex;
     align-items: center;
@@ -28,41 +36,49 @@ ul.menu {
 ul.menu > li {
     position: relative;
     margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+ul.menu > li:hover {
+    transform: translateY(-5px); /* Speelse beweging bij hover */
 }
 
 ul.menu > li > a {
     color: #ffffff; /* Witte tekst */
     text-decoration: none;
-    padding: 12px 18px;
+    padding: 12px 20px;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    border-radius: 10px; /* Meer afgeronde hoeken */
+    font-size: 16px;
+    border-radius: 25px; /* Ronde knoppen */
+    background-color: #5b3ca3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 ul.menu > li > a:hover {
     background-color: #ff7f00; /* Helder oranje bij hover */
-    transform: scale(1.1); /* Grotere schaal bij hover */
+    transform: translateY(-3px); /* Lichte opheffing */
 }
 
 /* Dropdown menu */
 .dropdown .submenu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5b3ca3;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .dropdown:hover .submenu {
     display: block;
-}
-
-.submenu {
-    position: absolute;
-    top: 100%; /* Plaats submenu onder de hoofdlink */
-    background-color: #4b2c91; /* Donkerder paars */
-    padding: 10px;
-    border-radius: 10px; /* Afronde hoeken */
-    min-width: 160px; /* Iets bredere submenu */
-    z-index: 1;
-    text-align: left;
-    animation: fadeIn 0.5s; /* Fade-in animatie */
+    opacity: 1;
 }
 
 .submenu li {
@@ -70,16 +86,17 @@ ul.menu > li > a:hover {
 }
 
 .submenu a {
-    color: #ffffff; /* Witte tekst */
+    color: #ffffff; 
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     display: block;
-    font-size: 16px;
-    border-radius: 5px; /* Afronde hoeken */
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .submenu a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Transparant wit bij hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Lichte hover-overlay */
 }
 
 /* Submenu binnen de submenu */
@@ -88,10 +105,10 @@ ul.menu > li > a:hover {
     position: absolute;
     left: 160px; /* Plaats submenu rechts van het hoofdsubmenu */
     top: 0;
-    background-color: #4b2c91;
+    background-color: #5b3ca3;
     padding: 10px;
-    border-radius: 5px;
-    animation: fadeIn 0.5s; /* Fade-in animatie */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .submenu li:hover .submenu-right {
@@ -101,76 +118,91 @@ ul.menu > li > a:hover {
 /* Inhoud stijlen */
 .content {
     max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #fff8dc; /* Crème achtergrond */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    color: #333333; /* Donkergrijze tekstkleur */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: #333333;
     text-align: left;
-    line-height: 1.7;
+    line-height: 1.8;
     display: flex;
-    flex-direction: column; /* Gebruik kolomrichting voor de inhoud */
+    flex-direction: column;
     gap: 25px;
     opacity: 0;
-    animation: fadeIn 1s forwards; /* Animatie voor fade-in effect */
+    animation: fadeIn 1s forwards;
 }
 
 .content h1, .content h2, .content h3 {
-    color: #3c2a91; /* Midnight Purple voor kopjes */
-    margin-top: 0;  /* Geen marge aan de bovenkant van de kopjes */
-    margin-bottom: 5px; /* Zeer kleine marge aan de onderkant van de kopjes */
-    padding: 0; /* Verwijder eventuele padding van kopjes */
+    color: #3c2a91;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.content h1:hover, .content h2:hover, .content h3:hover {
+    color: #ff7f00; /* Kleurverandering bij hover */
 }
 
 .content p {
-    margin-top: 0; /* Geen ruimte boven alinea's */
-    margin-bottom: 15px; /* Kleinere ruimte onder de alinea */
-    font-size: 17px; /* Aangepaste lettergrootte voor alinea's */
-    padding: 0; /* Verwijder padding van alinea's */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 0;
 }
 
 .content .media {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .content img, .content video {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centraal uitlijnen van afbeeldingen */
-    border-radius: 10px; /* Afronde hoeken voor media */
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.content img:hover, .content video:hover {
+    transform: scale(1.05); /* Vergroot afbeelding/video bij hover */
 }
 
 /* Footer stijlen */
 .footer {
-    background-color: #3c2a91; /* Midnight Purple */
-    color: #ffffff; /* Witte tekst */
-    padding: 20px;
+    background-color: #3c2a91;
+    color: #ffffff;
+    padding: 20px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
-    border-top: 5px solid #ff7f00; /* Helder oranje bovenlijn */
+    font-size: 14px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .footer a {
     color: #ffffff;
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff7f00; /* Hover-effect voor links */
 }
 
 .footer img {
-    width: 30px;
-    height: 30px;
-    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
 }
 
-/* Animaties */
+/* Animatie voor fade-in effect bij de inhoud */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
     to {
         opacity: 1;
     }
