@@ -11,11 +11,11 @@ body {
 
 /* Menu-container en menu stijlen */
 .menu-container {
-    background-color: #f58c14; /* Midnight Purple */
+    background-color: #f58c14;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 15px 0;
     text-align: center;
-    border-radius: 10px; /* Rondere hoeken voor het menu */
+    border-radius: 10px; 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -40,7 +40,7 @@ ul.menu > li {
 }
 
 ul.menu > li:hover {
-    transform: translateY(-5px); /* Speelse beweging bij hover */
+    transform: translateY(-5px); /* beweging bij hover */
 }
 
 ul.menu > li > a {
@@ -49,14 +49,14 @@ ul.menu > li > a {
     padding: 12px 20px;
     font-weight: bold;
     font-size: 16px;
-    border-radius: 25px; /* Ronde knoppen */
-    background-color: #veranderlater;
+    border-radius: 25px; 
+    background-color: #d1730f;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 ul.menu > li > a:hover {
-    background-color: #ff7f00; /* Helder oranje bij hover */
+    background-color: #a35a0d; /* Helder oranje bij hover */
     transform: translateY(-3px); /* Lichte opheffing */
 }
 
@@ -66,7 +66,7 @@ ul.menu > li > a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #5b3ca3;
+    background-color: #5b3ca3; /* verander */
     padding: 10px;
     border-radius: 10px;
     min-width: 160px;
