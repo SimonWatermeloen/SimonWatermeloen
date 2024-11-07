@@ -67,7 +67,7 @@ ul.menu > li > a:hover {
 
 .dropdown .submenu {
     display: none;
-    position: absolute;
+    position: relative; /*deze is veranderd, (als fout) */
     top: 100%;
     left: 0;
     background-color: #6ba45f; /* Groen voor het submenu */
