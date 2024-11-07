@@ -3,15 +3,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5; /* Lichtere achtergrondkleur */
-    color: #333333; /* Donkergrijze tekst */
+    background-color: #c43543; /* Lichtere achtergrondkleur */
+    color: #ffff; /* Donkergrijze tekst */
     line-height: 1.6;
     transition: background-color 0.3s ease;
 }
 
 /* Menu-container en menu stijlen */
 .menu-container {
-    background-color: #3c2a91; /* Midnight Purple */
+    background-color: #f58c14; /* Midnight Purple */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 15px 0;
     text-align: center;
@@ -50,7 +50,7 @@ ul.menu > li > a {
     font-weight: bold;
     font-size: 16px;
     border-radius: 25px; /* Ronde knoppen */
-    background-color: #5b3ca3;
+    background-color: #veranderlater;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
